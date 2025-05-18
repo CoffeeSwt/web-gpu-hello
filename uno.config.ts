@@ -5,24 +5,24 @@ import {
   presetAttributify,
   presetIcons,
   presetTypography,
-  presetUno,
   presetWebFonts,
   transformerDirectives,
-  transformerVariantGroup
-} from 'unocss'
+  transformerVariantGroup,
+} from "unocss";
+import { presetWind3 } from "unocss/preset-wind3";
 
 export default defineConfig({
   shortcuts: {
-    'flex-center': 'flex justify-center items-center',
-    'size-screen':'w-full h-screen'
+    "flex-center": "flex justify-center items-center",
+    "size-screen": "w-full h-screen",
   },
   theme: {
     colors: {
       // ...
-    }
+    },
   },
   presets: [
-    presetUno(),
+    presetWind3(),
     presetAttributify(),
     presetIcons(),
     presetTypography(),
@@ -32,8 +32,5 @@ export default defineConfig({
       },
     }),
   ],
-  transformers: [
-    transformerDirectives(),
-    transformerVariantGroup(),
-  ],
-})
+  transformers: [transformerDirectives(), transformerVariantGroup()],
+});
